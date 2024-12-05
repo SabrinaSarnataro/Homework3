@@ -306,7 +306,7 @@ private:
                 
                 if(rot_axis=='x'){
                     R_offset = Eigen::AngleAxisd(offset_angle,
-                    Eigen::Vector3d::UnitX()).toRotationMatrix(); /
+                    Eigen::Vector3d::UnitX()).toRotationMatrix(); 
                 }
                 else if(rot_axis=='y'){
                     R_offset = Eigen::AngleAxisd(offset_angle, Eigen::Vector3d::UnitY()).toRotationMatrix(); 
