@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="default">
+    <!-- Included light -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
+    </include>
+ 
+    <!-- Included model -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground Plane</uri>
+    </include>
+    
+    <include>						      <!-- aggiunge un modello già esistente al mondo -->	
+      <uri>model://spherical_object</uri>		      <!-- Specifica il percorso del modello da includere. Cerca il modello nella directory dei modelli di Gazebo -->
+      <pose>1 -0.5 0.6 0 0 0</pose>			      <!-- La posizione è quella richiesta dalla traccia, l'orientamento non è definito perché stiamo parlando di una sfera (non cambia nulla) -->
+    </include>						      
+    
+    <gravity>0 0 0</gravity>                                  <!-- mettiamo anche questo mondo senza gravità, per coerenza-->
+  
+ 
+  </world>
+</sdf>
+

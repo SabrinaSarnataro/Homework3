@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">                                
+  <model name="spherical_object">                   <!--assegna questo nome al model che viene inserito nel world-->
+    <static>true</static>                           <!-- oggetto statico: non si muove. In questo modo preveniamo la caduta per effetto della gravità -->
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.15</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1.0</ambient>        <!-- il tag ambient è usato per definire il colore e la trasparenza di un oggetto. I primi 3 valori indicano R (red), G (green) e B(blue) -->
+						    <!-- l'ultimo valore indica l'opacità dell'oggetto, 1.0 indica che l'oggetto è totalmente opaco, se lo volessi più trasparente dovrei diminuirlo -->
+						    <!-- noi vogliamo che la sfera sia blu quindi poniamo il valore di B a 1.0 -->
+          <diffuse>0.0 0.0 1.0 1.0</diffuse>	    <!-- Definisce come l'oggetto appare sotto l'illuminazione diretta proveniente da una sorgente luminosa nella scena. -->
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.15</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
+
+      
